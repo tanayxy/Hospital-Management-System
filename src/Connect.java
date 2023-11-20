@@ -29,7 +29,9 @@ public class Connect {
 
             // Establish a connection to the database
             connection = DriverManager.getConnection(url, username, password);
-        } 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         
         return connection;
     }
